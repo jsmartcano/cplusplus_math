@@ -45,7 +45,7 @@ void CDinamicArray2D::paint() {
 
 int main() {	
 	CDinamicArray2D a = CDinamicArray2D(2, 3);
-	cout << "Primero la matriz inicializada a ceros" << endl;
+	cout << "Primero la array inicializada a ceros" << endl;
 	a.paint();
 	a.insertElement(1, 1, 1);  // inserta fila 1
 	a.insertElement(1, 2, 2); 
@@ -54,7 +54,7 @@ int main() {
 	a.insertElement(2, 1, 4); // inserta fila 2
 	a.insertElement(2, 2, 5);
 	a.insertElement(2, 3, 6);
-	cout << "Ahora la matriz inicializada " << endl;
+	cout << "Ahora la array inicializada " << endl;
 	a.paint();
 	char key; cin >> key;
 	return 0;
