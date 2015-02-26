@@ -5,7 +5,8 @@ using namespace std;
 class CDinamicArray2D {
 	public:
 		CDinamicArray2D(int iRows, int iCols);
-		int insertElement(int iRow, int iCol, float value);
+		int setElement(int iRow, int iCol, float value);
+		float getElement(int iRow, int iCol);
 		void paint();
 	private:
 		float **aArray = NULL;  // Esto es un puntero que apunta a un objeto de tipo puntero float
@@ -27,9 +28,14 @@ CDinamicArray2D::CDinamicArray2D(int iRows, int iCols) {
 };
 
 // Insertar elemento fValue en una fila y columna
-int CDinamicArray2D::insertElement(int iRow, int iCol, float fValue) {
+int CDinamicArray2D::setElement(int iRow, int iCol, float fValue) {
 	aArray[iRow-1][iCol-1]=fValue;
 	return 0;
+};
+
+// Extraer un elemento
+float CDinamicArray2D::getElement(int iRow, int iCol){
+	return aArray[iRow-1][iCol-1];
 };
 
 // Dibujar el array en pantalla
@@ -40,22 +46,25 @@ void CDinamicArray2D::paint() {
 		};
 		cout << endl;
 	};
-}
+};
 
 
 int main() {	
 	CDinamicArray2D a = CDinamicArray2D(2, 3);
-	cout << "Primero la array inicializada a ceros" << endl;
+	cout << "Primero el array inicializada a ceros" << endl;
 	a.paint();
-	a.insertElement(1, 1, 1);  // inserta fila 1
-	a.insertElement(1, 2, 2); 
-	a.insertElement(1, 3, 3);
+	cout << "El elemento 2,2 vale: " << a.getElement(2, 2) << endl << endl;
 
-	a.insertElement(2, 1, 4); // inserta fila 2
-	a.insertElement(2, 2, 5);
-	a.insertElement(2, 3, 6);
+	a.setElement(1, 1, 1);  // inserta fila 1
+	a.setElement(1, 2, 2);
+	a.setElement(1, 3, 3);
+
+	a.setElement(2, 1, 4); // inserta fila 2
+	a.setElement(2, 2, 5);
+	a.setElement(2, 3, 6);
 	cout << "Ahora la array inicializada " << endl;
 	a.paint();
+	cout << "El elemento 2,2 vale: " << a.getElement(2, 2) << endl;
 	char key; cin >> key;
 	return 0;
 };
