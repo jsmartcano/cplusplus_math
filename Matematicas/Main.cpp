@@ -20,9 +20,9 @@ int main(void) {
 	a.paint();
 	cout << "El elemento 2,2 vale: " << a.getElement(2, 2) << endl << endl;
 
-	CMatrix2D m = CMatrix2D(2, 2);
+	CMatrix2D m = CMatrix2D(1, 6);
 	m.paint();
-	cout << "Matriz 2,2 vale: " << m.getElement(2, 2) << endl << endl;
+	cout << "Matriz 1,4 vale: " << m.getElement(1, 4) << endl << endl;
 
 	char key; cin >> key;
 	return 0;

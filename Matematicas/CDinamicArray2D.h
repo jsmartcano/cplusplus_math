@@ -11,6 +11,8 @@ public:
 	void paint();
 	int getNumRows();
 	int getNumCols();
+	~CDinamicArray2D();
+
 private:
 	float **aArray;  // Esto es un puntero que apunta a un objeto de tipo puntero float
 	int iRows; 	// Numero de filas

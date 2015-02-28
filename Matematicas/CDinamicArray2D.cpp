@@ -44,5 +44,10 @@ int CDinamicArray2D::getNumCols() {
 	return this->iCols;
 }
 
-
+CDinamicArray2D::~CDinamicArray2D() {
+	for (int i = 0; i < iRows; i++) {
+		//delete[] aArray[i];
+	};
+	//delete[] aArray;
+}
 

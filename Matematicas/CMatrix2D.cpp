@@ -4,3 +4,8 @@
 CMatrix2D::CMatrix2D(int iRows, int iCols) : CDinamicArray2D(iRows, iCols) {
 	
 };
+
+// Destructor
+CMatrix2D::~CMatrix2D() {
+
+}

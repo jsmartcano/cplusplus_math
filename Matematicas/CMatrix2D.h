@@ -8,6 +8,7 @@
 class CMatrix2D : public CDinamicArray2D {
 public:
 	CMatrix2D(int iRows, int iCols);
+	~CMatrix2D();
 };
 
 #endif
