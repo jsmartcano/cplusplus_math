@@ -4,9 +4,9 @@ using namespace std;
 
 // Constructor, recibiendo un numero filas y de columnas
 CDinamicArray2D::CDinamicArray2D(int iRows, int iCols) {
-	aArray = new float *[iRows - 1];
+	aArray = new float *[iRows];
 	for (int i = 0; i < iRows; i++) {
-		aArray[i] = new float[iCols - 1];
+		aArray[i] = new float[iCols];
 		for (int j = 0; j < iCols; j++) {
 			aArray[i][j] = 0;
 		};
@@ -46,8 +46,8 @@ int CDinamicArray2D::getNumCols() {
 
 CDinamicArray2D::~CDinamicArray2D() {
 	for (int i = 0; i < iRows; i++) {
-		//delete[] aArray[i];
+		delete[] aArray[i];
 	};
-	//delete[] aArray;
+	delete[] aArray;
 }
 
